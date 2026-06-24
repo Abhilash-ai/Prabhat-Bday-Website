@@ -176,7 +176,7 @@ export default function App() {
       title: "Student Life",
       date: "The Academic Years",
       caption: "Late night study sessions, drawing boards, and big dreams. Where Dudu's passion for structural design and architecture first took root.",
-      imgUrl: "/assets/student-life.jpg", // Add student photo path here! (e.g. "/assets/student-life.jpg")
+      imgUrl: import.meta.env.BASE_URL + "assets/student-life.jpg", // Add student photo path here! (e.g. "/assets/student-life.jpg")
       svg: () => (
         <svg viewBox="0 0 300 300" className="w-full h-full bg-[#FCFAF2]">
           {/* T-Square */}
@@ -203,7 +203,7 @@ export default function App() {
       title: "Architecture Life",
       date: "The Creative Profession",
       caption: "Turning complex blueprints into modern realities. Shaping spaces with meticulous precision, creative vision, and a constant cup of coffee nearby.",
-      imgUrl: "/assets/architecture-life.jpg", // Add architecture photo path here! (e.g. "/assets/architecture-life.jpg")
+      imgUrl: import.meta.env.BASE_URL + "assets/architecture-life.jpg", // Add architecture photo path here! (e.g. "/assets/architecture-life.jpg")
       svg: () => (
         <svg viewBox="0 0 300 300" className="w-full h-full bg-[#1A2634]">
           {/* Grid lines */}
@@ -230,7 +230,7 @@ export default function App() {
       title: "Cute Dudu",
       date: "Everyday Adorable Bear",
       caption: "Bubu's absolute favorite phase—just Dudu being Dudu! Sweet, caring, and unconditionally adorable in every single cozy moment.",
-      imgUrl: "/assets/cute-dudu.jpg", // Add cute dudu photo path here! (e.g. "/assets/cute-dudu.jpg")
+      imgUrl: import.meta.env.BASE_URL + "assets/cute-dudu.jpg", // Add cute dudu photo path here! (e.g. "/assets/cute-dudu.jpg")
       svg: () => (
         <svg viewBox="0 0 300 300" className="w-full h-full bg-[#FDF0EE]">
           {/* Cute Bear Ears */}

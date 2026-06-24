@@ -37,19 +37,19 @@ export default function BirthdayLetter() {
 
 
   return (
-    <section className="py-28 bg-[#FAF6EE] px-4 md:px-8 border-t border-gold/10 relative overflow-hidden flex justify-center items-center">
+    <section className="py-28 bg-[#FAF6EE] px-4 md:px-8 border-t border-gold/10 relative overflow-hidden flex flex-col justify-center items-center">
       {/* Grid Pattern and layout lines */}
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none opacity-30" />
       <div className="absolute left-[10%] top-0 bottom-0 w-[1px] bg-red-200/40 hidden md:block" /> {/* Margin line for writing paper */}
 
-      {/* Interactive Sticker Card - Dudu & Bubu Selfie */}
+      {/* Interactive Sticker Card - Dudu & Bubu Selfie (Desktop) */}
       <div className="absolute right-[4%] lg:right-[7%] bottom-[20%] w-60 h-60 hidden md:block z-20">
         <motion.div
           whileHover={{ scale: 1.06, rotate: 3 }}
           className="p-3 bg-white border border-border/80 rounded-full shadow-lg polaroid-shadow flex items-center justify-center cursor-pointer select-none"
         >
           <div className="w-52 h-52 rounded-full overflow-hidden border border-border/50 bg-[#FCFAF7] flex items-center justify-center">
-            <img src="/assets/dudu-bubu-selfie.jpg" alt="Dudu and Bubu" className="w-full h-full object-cover scale-110" />
+            <img src={import.meta.env.BASE_URL + "assets/dudu-bubu-selfie.jpg"} alt="Dudu and Bubu" className="w-full h-full object-cover scale-110" />
           </div>
         </motion.div>
       </div>
@@ -109,6 +109,18 @@ export default function BirthdayLetter() {
           </motion.div>
         </div>
       </motion.div>
+
+      {/* Mobile Sticker (shown only on small screens) */}
+      <div className="mt-8 block md:hidden z-20">
+        <motion.div
+          whileHover={{ scale: 1.06, rotate: 3 }}
+          className="p-3 bg-white border border-border/80 rounded-full shadow-lg polaroid-shadow flex items-center justify-center cursor-pointer select-none"
+        >
+          <div className="w-48 h-48 rounded-full overflow-hidden border border-border/50 bg-[#FCFAF7] flex items-center justify-center">
+            <img src={import.meta.env.BASE_URL + "assets/dudu-bubu-selfie.jpg"} alt="Dudu and Bubu" className="w-full h-full object-cover scale-110" />
+          </div>
+        </motion.div>
+      </div>
     </section>
   )
 }

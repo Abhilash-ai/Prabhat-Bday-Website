@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 
 // Photo references from Replit
-export const DUDO_PHOTO = "/assets/dudu-real-vbnJtF7Z.jpg"
-export const BUBO_PHOTO = "/assets/bubu-real-DuD00zem.jpg"
+export const DUDO_PHOTO = import.meta.env.BASE_URL + "assets/dudu-real-vbnJtF7Z.jpg"
+export const BUBO_PHOTO = import.meta.env.BASE_URL + "assets/bubu-real-DuD00zem.jpg"
 
 interface CiProps {
   src: string
